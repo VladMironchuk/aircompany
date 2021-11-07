@@ -16,7 +16,8 @@
     "npm": ">=3.10.8"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "mocha": "^6.2.0",
-    "chai": "^4.2.0"
+    "prettier": "^2.4.1"
   }
 }
