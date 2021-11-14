@@ -13,19 +13,15 @@ class Airport {
   }
 
   getPassengerPlanes() {
-    return this.planes.filter((plane) => plane.constructor.name === "PassengerPlane");
+    return this.planes.filter((plane) => plane instanceof PassengerPlane);
   }
 
   getMilitaryPlanes() {
-    return this.planes.filter(
-      (plane) => plane.constructor.name === "MilitaryPlane"
-    );
+    return this.planes.filter((plane) => plane instanceof MilitaryPlane);
   }
 
   getExperimentalPlanes() {
-    return this.getMilitaryPlanes().filter(
-      (plane) => plane.constructor.name === "ExperimentalPlane"
-    );
+    return this.planes.filter((plane) => plane instanceof ExperimentalPlane);
   }
 
   getBomberMilitaryPlanes() {
